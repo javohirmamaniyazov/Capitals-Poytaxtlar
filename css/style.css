@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+
+
+.start_btn,
+.info_box,
+.quiz_box,
+.result_box {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} 
+
+
+.quiz_box.activeQuiz,
+.result_box.activeResult{
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.start_btn {
+    font-size: 25px;
+    font-weight: 500;
+    color: #000;
+    padding: 15px 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.quiz_box{
+    width: 550px;
+    background-color: #fff;
+    border-radius: 7px;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.quiz_main {
+    padding: 25px 30px 20px 30px;
+    background-color: #fff;
+}
+
+.quiz_main .quiz_text {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.quiz_main .option_list {
+    padding: 20px 0;
+    display: block;
+}
+
+.quiz_main .option_list .option {
+    background: aliceblue;
+    border: 1px solid #84c5fe;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 17px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items:  center;
+    justify-content:  space-between;
+}
+
+.quiz_main .option_list .option.correct{
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c1d7c6;
+}
+
+.quiz_main .option_list .option.incorrect{
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f8d7da;
+}
+
+.quiz_main .option_list .option.disabled{
+    pointer-events:  none;
+}
+
+footer .next_btn {
+    margin: 0 30px 20px;
+    float: right;
+    height: 40px;
+    padding: 0 15px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #ff6600;
+}
+
+.result_box {
+    width: 460px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transform: translate(-50%, -50%) scale(0.9);
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    padding: 25px 30px;
+}
+
+.result_box .restart {
+background-color: #77797a;
+color: #fff;
+font-size: 18px;
+padding: 0 20px;
+height: 45px;
+cursor: pointer;
+outline: none;
+border:  none;
+border-radius: 5px;
+}
+
+
+
